@@ -63,7 +63,7 @@
             overflow: hidden;
         }
 
-        /* Fixed Image Hover Logic */
+        /* Fixed Image Hover Logic - Black & White to Color */
         .profile-img {
             filter: grayscale(100%) brightness(90%);
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -108,7 +108,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-[#0B1020]/80 backdrop-blur-md border-b border-[#1E2A44]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="font-outfit font-black text-xl tracking-tighter uppercase">K<span class="text-[#C9A24A]">.</span>SHERIF</span>
+            <span class="font-outfit font-black text-xl tracking-tighter uppercase italic">KHALED SHERIF</span>
             <div class="flex items-center space-x-10 text-[10px] font-bold tracking-[0.3em] uppercase">
                 <a href="#honors" class="hover:text-[#C9A24A] transition">Accolades</a>
                 <a href="#experience" class="hover:text-[#C9A24A] transition">Research</a>
@@ -121,15 +121,16 @@
     <!-- Section 1: Hero -->
     <header class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
         <div class="math-overlay top-40 left-10">
-            dy/dx = lim(h->0) [f(x+h)-f(x)]/h <br>
-            ∑(n=1 to ∞) 1/n² = π²/6 <br>
-            e^iπ + 1 = 0
+            dy/dx = lim(h->0) [f(x+h)-f(x)]/h <br>∑(n=1 to ∞) 1/n² = π²/6 <br>e^iπ + 1 = 0
         </div>
 
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center z-10">
             <div class="lg:col-span-7" data-aos="fade-right">
-                <p class="text-[#C9A24A] font-bold tracking-[0.4em] uppercase text-xs mb-6">Researcher • Mathematician • Strategist</p>
-                <h1 class="giant-heading font-outfit leading-none mb-8">THINKING <br> <span class="text-[#C9A24A]">DEEPLY.</span></h1>
+                <!-- Name at the top of Hero -->
+                <p class="text-[#C9A24A] font-bold tracking-[0.4em] uppercase text-xs mb-4">Khaled Sherif • Researcher • Mathematician</p>
+                <!-- Kept Thinking Deeply -->
+                <h1 class="giant-heading font-outfit leading-[0.95] mb-8">THINKING <br> <span class="text-[#C9A24A]">DEEPLY.</span></h1>
+                
                 <p class="text-2xl text-[#B7C0D1] max-w-xl font-light leading-relaxed mb-10">
                     A high-achieving STEM scholar deconstructing complex industrial problems into solvable <span class="text-white border-b border-[#C9A24A]/30">mathematical models</span>.
                 </p>
@@ -148,7 +149,7 @@
 
             <div class="lg:col-span-5" data-aos="fade-left">
                 <div class="hero-img-container">
-                    <!-- IMAGE ASSET: me.jpg with fix color on hover -->
+                    <!-- Photo with B&W to Color effect -->
                     <img src="me.jpg" alt="Khaled Sherif" class="profile-img w-full aspect-[4/5] object-cover">
                     <div class="absolute -bottom-4 -left-4 bg-[#C9A24A] text-black p-4 font-bold text-xs">
                         STEM ADMISSIONS: TOP 2.2%
@@ -158,7 +159,7 @@
         </div>
     </header>
 
-    <!-- Section 2: Long-Form Honors -->
+    <!-- Section 2: Honors -->
     <section id="honors" class="py-32 bg-[#111A2E]">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-12">I. Academic Honors</h2>
@@ -313,15 +314,15 @@
             <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-16">IV. Languages</h2>
             <div class="flex flex-col md:flex-row justify-between gap-12">
                 <div class="group" data-aos="fade-right">
-                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none">ARABIC</p>
+                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none uppercase">Arabic</p>
                     <p class="text-[10px] font-bold tracking-[0.3em] text-[#C9A24A] uppercase mt-4">Native Proficiency</p>
                 </div>
                 <div class="group" data-aos="fade-right" data-aos-delay="100">
-                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none">ENGLISH</p>
+                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none uppercase">English</p>
                     <p class="text-[10px] font-bold tracking-[0.3em] text-[#C9A24A] uppercase mt-4">Fluent / Professional</p>
                 </div>
                 <div class="group" data-aos="fade-right" data-aos-delay="200">
-                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none">FRENCH</p>
+                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none uppercase">French</p>
                     <p class="text-[10px] font-bold tracking-[0.3em] text-[#C9A24A] uppercase mt-4">Intermediate / Academic</p>
                 </div>
             </div>
@@ -332,27 +333,27 @@
     <footer id="contact" class="py-40 bg-white text-[#0B1020] px-6 overflow-hidden relative">
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
             <h2 class="text-6xl md:text-9xl font-black font-outfit leading-none mb-12 tracking-tighter uppercase">Let's Connect.</h2>
-            <p class="text-2xl font-light max-w-2xl mb-16 italic text-gray-700">Open for research collaborations and academic inquiries.</p>
-            <a href="mailto:khaled.2523016@stemelsadat.moe.edu.eg" class="text-4xl md:text-6xl font-bold border-b-8 border-[#0B1020] hover:text-[#C9A24A] hover:border-[#C9A24A] transition-all pb-4 break-all">
-                khaled.sherif@stem
+            <p class="text-2xl font-light max-w-2xl mb-16 italic text-gray-700">Khaled Sherif • STEM Excellence & Research</p>
+            
+            <a href="mailto:khaled.2523016@stemelsadat.moe.edu.eg" class="text-2xl md:text-4xl lg:text-5xl font-bold border-b-8 border-[#0B1020] hover:text-[#C9A24A] hover:border-[#C9A24A] transition-all pb-4 break-all">
+                khaled.2523016@stemelsadat.moe.edu.eg
             </a>
             
             <div class="mt-40 grid grid-cols-2 md:grid-cols-4 gap-12 w-full text-left pt-20 border-t border-[#0B1020]/10">
+                <div>
+                    <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Profile</span>
+                    <p class="font-bold">Khaled Sherif</p>
+                </div>
                 <div>
                     <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Location</span>
                     <p class="font-bold">Giza, Egypt</p>
                 </div>
                 <div>
                     <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Social</span>
-                    <a href="https://github.com/KhaledWalied" target="_blank" class="font-bold hover:text-[#C9A24A] block">Github Profile</a>
-                </div>
-                <div>
-                    <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Education</span>
-                    <p class="font-bold">El-Sadat STEM School</p>
+                    <a href="https://github.com/KhaledWalied" target="_blank" class="font-bold hover:text-[#C9A24A] block">GitHub</a>
                 </div>
                 <div>
                     <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Resume</span>
-                    <!-- Updated Resume Link -->
                     <a href="resume.pdf" target="_blank" class="font-bold hover:text-[#C9A24A] uppercase underline underline-offset-8">Download PDF</a>
                 </div>
             </div>
