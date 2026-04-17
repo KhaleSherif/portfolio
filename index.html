@@ -63,7 +63,6 @@
             overflow: hidden;
         }
 
-        /* Fixed Image Hover Logic - Black & White to Color */
         .profile-img {
             filter: grayscale(100%) brightness(90%);
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,6 +98,19 @@
             pointer-events: none;
             white-space: pre;
         }
+
+        .video-box {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            padding: 8px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -109,10 +121,11 @@
     <nav class="fixed top-0 w-full z-50 bg-[#0B1020]/80 backdrop-blur-md border-b border-[#1E2A44]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <span class="font-outfit font-black text-xl tracking-tighter uppercase italic">KHALED SHERIF</span>
-            <div class="flex items-center space-x-10 text-[10px] font-bold tracking-[0.3em] uppercase">
+            <div class="flex items-center space-x-8 text-[10px] font-bold tracking-[0.3em] uppercase">
                 <a href="#honors" class="hover:text-[#C9A24A] transition">Accolades</a>
                 <a href="#experience" class="hover:text-[#C9A24A] transition">Research</a>
                 <a href="#leadership" class="hover:text-[#C9A24A] transition">Impact</a>
+                <a href="#community" class="hover:text-[#C9A24A] transition">Community</a>
                 <a href="#languages" class="hover:text-[#C9A24A] transition">Languages</a>
             </div>
         </div>
@@ -126,9 +139,7 @@
 
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center z-10">
             <div class="lg:col-span-7" data-aos="fade-right">
-                <!-- Name at the top of Hero -->
                 <p class="text-[#C9A24A] font-bold tracking-[0.4em] uppercase text-xs mb-4">Khaled Sherif • Researcher • Mathematician</p>
-                <!-- Kept Thinking Deeply -->
                 <h1 class="giant-heading font-outfit leading-[0.95] mb-8">THINKING <br> <span class="text-[#C9A24A]">DEEPLY.</span></h1>
                 
                 <p class="text-2xl text-[#B7C0D1] max-w-xl font-light leading-relaxed mb-10">
@@ -141,7 +152,7 @@
                         <p class="text-[10px] text-[#C9A24A] font-bold uppercase tracking-widest">Unweighted GPA</p>
                     </div>
                     <div>
-                        <p class="text-xl md:text-2xl font-bold uppercase tracking-tight">El-Sadat STEM School</p>
+                        <p class="text-xl md:text-2xl font-bold uppercase tracking-tight text-white">El-Sadat STEM School</p>
                         <p class="text-[10px] text-[#C9A24A] font-bold uppercase tracking-widest mt-1 tracking-[0.3em]">Institutional Affiliation</p>
                     </div>
                 </div>
@@ -149,9 +160,8 @@
 
             <div class="lg:col-span-5" data-aos="fade-left">
                 <div class="hero-img-container">
-                    <!-- Photo with B&W to Color effect -->
                     <img src="me.jpg" alt="Khaled Sherif" class="profile-img w-full aspect-[4/5] object-cover">
-                    <div class="absolute -bottom-4 -left-4 bg-[#C9A24A] text-black p-4 font-bold text-xs">
+                    <div class="absolute -bottom-4 -left-4 bg-[#C9A24A] text-black p-4 font-bold text-xs uppercase tracking-widest">
                         STEM ADMISSIONS: TOP 2.2%
                     </div>
                 </div>
@@ -173,53 +183,25 @@
                                 <p class="text-[#B7C0D1] text-lg mt-2">Ranked 1st Place Globally out of 4,613 competing teams worldwide.</p>
                             </div>
                         </div>
-                        <div class="text-right">
-                            <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">Worldwide Distinction</span>
+                    </div>
+                </div>
+
+                <div class="honor-row group" data-aos="fade-up">
+                    <div class="flex items-center gap-10">
+                        <span class="number-outline">02</span>
+                        <div>
+                            <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">National Math Team</h3>
+                            <p class="text-[#B7C0D1] text-lg mt-2">Selected for the Egyptian National Team for the IMO and PAMO 2025.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="honor-row group" data-aos="fade-up">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                        <div class="flex items-center gap-10">
-                            <span class="number-outline">02</span>
-                            <div>
-                                <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">National Math Team</h3>
-                                <p class="text-[#B7C0D1] text-lg mt-2">Selected for the Egyptian National Team for the IMO and PAMO 2025.</p>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">Olympic Selection</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="honor-row group" data-aos="fade-up">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                        <div class="flex items-center gap-10">
-                            <span class="number-outline">03</span>
-                            <div>
-                                <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">Physics Olympiad (EPHO)</h3>
-                                <p class="text-[#B7C0D1] text-lg mt-2">Ranked 8th Nationally in Egypt out of ~900 selected high-performance students.</p>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">Top 10 Finalist</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="honor-row group border-none" data-aos="fade-up">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                        <div class="flex items-center gap-10">
-                            <span class="number-outline">04</span>
-                            <div>
-                                <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">ESEF Math Fair</h3>
-                                <p class="text-[#B7C0D1] text-lg mt-2">3rd Place in the National category for Mathematical Research & Software Development.</p>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">National Prize</span>
+                    <div class="flex items-center gap-10">
+                        <span class="number-outline">03</span>
+                        <div>
+                            <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">Physics Olympiad (EPHO)</h3>
+                            <p class="text-[#B7C0D1] text-lg mt-2">Ranked 8th Nationally in Egypt out of ~900 selected high-performance students.</p>
                         </div>
                     </div>
                 </div>
@@ -236,30 +218,21 @@
                     <div>
                         <h4 class="text-3xl font-bold mb-4 font-outfit">City Plast Optimization</h4>
                         <p class="text-[#B7C0D1] leading-relaxed text-lg font-light">
-                            Developed a Python-based model to optimize polymer extrusion processes. Successfully <strong>reduced scrap material by 12%</strong> and improved manufacturing uptime through mathematical analysis.
+                            Developed a Python-based model to optimize polymer extrusion processes. Successfully <strong>reduced scrap material by 12%</strong>.
                         </p>
                     </div>
                     <div>
                         <h4 class="text-3xl font-bold mb-4 font-outfit">Urban Road Flow Model</h4>
                         <p class="text-[#B7C0D1] leading-relaxed text-lg font-light">
-                            Designed a mathematical software model to minimize urban travel time. Ran simulations using <strong>Python and Matlab</strong> to solve high-congestion bottlenecks using graph theory.
+                            Designed a mathematical software model to minimize urban travel time using <strong>Python and Matlab</strong>.
                         </p>
                     </div>
                 </div>
             </div>
             <div data-aos="fade-left" class="flex flex-col justify-center">
-                <div class="p-12 border border-[#1E2A44] bg-[#111A2E] rounded-3xl">
+                <div class="p-12 border border-[#1E2A44] bg-[#111A2E] rounded-3xl text-center">
                     <h5 class="text-[#C9A24A] font-bold uppercase text-xs mb-8 tracking-widest">Engineering Intern</h5>
-                    <ul class="space-y-6">
-                        <li class="flex gap-4">
-                            <span class="text-[#C9A24A] font-bold italic text-lg w-12">CAD</span>
-                            <span class="text-[#B7C0D1]">High-precision mechanical drafting and design.</span>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="text-[#C9A24A] font-bold italic text-lg w-12">Site</span>
-                            <span class="text-[#B7C0D1]">Machinery diagnostics and precision site measurement.</span>
-                        </li>
-                    </ul>
+                    <p class="text-[#B7C0D1] text-lg">Gained practical site experience in machinery repair, precision measurement, and CAD drafting.</p>
                 </div>
             </div>
         </div>
@@ -267,64 +240,77 @@
 
     <!-- Section 4: Leadership -->
     <section id="leadership" class="py-32 bg-[#111A2E] border-y border-[#1E2A44]">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-20 text-center">III. Impact & Leadership</h2>
-            <div class="flex flex-col">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-20">III. Impact & Leadership</h2>
+            <div class="flex flex-col text-left">
                 <div class="impact-badge" data-aos="fade-left">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
-                        <h3 class="text-3xl font-extrabold font-outfit">Pi4U: Math Olympiad Initiative</h3>
-                        <span class="text-[#C9A24A] font-bold text-sm mono uppercase">Founder</span>
-                    </div>
-                    <p class="text-[#B7C0D1] text-lg">Currently lecturing <strong>230+ students</strong> globally. Improved competitive math scores by <strong>+11 points</strong> on average.</p>
+                    <h3 class="text-3xl font-extrabold font-outfit uppercase">Pi4U: Math Olympiad Initiative</h3>
+                    <p class="text-[#B7C0D1] text-lg mt-4">Founder. Lecturing <strong>230+ students</strong> globally; improved scores by <strong>+11 points</strong> on average.</p>
                 </div>
-
                 <div class="impact-badge" data-aos="fade-left" data-aos-delay="100">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
-                        <h3 class="text-3xl font-extrabold font-outfit">Physics Olympiad Prep (EPHO)</h3>
-                        <span class="text-[#C9A24A] font-bold text-sm mono uppercase">Lead Coach</span>
-                    </div>
-                    <p class="text-[#B7C0D1] text-lg">Orchestrated training for <strong>150 students</strong>. Successfully coached 7 national qualifiers.</p>
-                </div>
-
-                <div class="impact-badge" data-aos="fade-left" data-aos-delay="200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
-                        <h3 class="text-3xl font-extrabold font-outfit">STEM School Chess Club</h3>
-                        <span class="text-[#C9A24A] font-bold text-sm mono uppercase">President</span>
-                    </div>
-                    <p class="text-[#B7C0D1] text-lg">Expanded membership to <strong>50+ players</strong> and organized cross-school tournaments.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mt-12" data-aos="fade-up">
-                    <div class="p-10 border border-[#1E2A44] bg-[#0B1020]">
-                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-4">Piano Performance</h4>
-                        <p class="text-[#B7C0D1] text-sm italic">Self-taught pianist and composer. Focused on music theory and original piece composition.</p>
-                    </div>
-                    <div class="p-10 border border-[#1E2A44] bg-[#0B1020]">
-                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-4">Varsity Volleyball</h4>
-                        <p class="text-[#B7C0D1] text-sm italic">Setter of the Year & School Champion. Directed strategy across 480+ hours of competition.</p>
-                    </div>
+                    <h3 class="text-3xl font-extrabold font-outfit uppercase">Physics Olympiad Prep</h3>
+                    <p class="text-[#B7C0D1] text-lg mt-4">Lead Coach. Orchestrated training for 150 students; coached 7 national qualifiers.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 5: Languages -->
-    <section id="languages" class="py-32 bg-[#0B1020] border-b border-[#1E2A44]">
+    <section id="languages" class="py-32 bg-[#0B1020]">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-16">IV. Languages</h2>
             <div class="flex flex-col md:flex-row justify-between gap-12">
                 <div class="group" data-aos="fade-right">
-                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none uppercase">Arabic</p>
-                    <p class="text-[10px] font-bold tracking-[0.3em] text-[#C9A24A] uppercase mt-4">Native Proficiency</p>
+                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors uppercase">Arabic</p>
                 </div>
                 <div class="group" data-aos="fade-right" data-aos-delay="100">
-                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none uppercase">English</p>
-                    <p class="text-[10px] font-bold tracking-[0.3em] text-[#C9A24A] uppercase mt-4">Fluent / Professional</p>
+                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors uppercase">English</p>
                 </div>
                 <div class="group" data-aos="fade-right" data-aos-delay="200">
-                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors leading-none uppercase">French</p>
-                    <p class="text-[10px] font-bold tracking-[0.3em] text-[#C9A24A] uppercase mt-4">Intermediate / Academic</p>
+                    <p class="text-5xl md:text-7xl font-black font-outfit text-white group-hover:text-[#C9A24A] transition-colors uppercase">French</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: MY IMMEDIATE COMMUNITY (NEW) -->
+    <section id="community" class="py-32 bg-[#111A2E] border-y border-[#1E2A44]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                
+                <div data-aos="fade-right">
+                    <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-12">V. My Immediate Community</h2>
+                    <h3 class="text-4xl md:text-6xl font-black font-outfit uppercase leading-none mb-10">
+                        A Shared <br> <span class="text-[#C9A24A]">Responsibility.</span>
+                    </h3>
+                    
+                    <div class="space-y-6 text-xl text-[#B7C0D1] font-light leading-relaxed">
+                        <p>
+                            In my immediate community, I see a group of people connected not only by proximity, but by a <strong>shared sense of care and responsibility</strong>. It is a place where people look out for one another in quiet, meaningful ways, whether through small acts of kindness or everyday support.
+                        </p>
+                        <p>
+                            One thing that stands out is the growing awareness of the environment. People here are becoming more mindful of how their actions affect the space around them—whether it’s reducing waste, keeping shared areas clean, or simply encouraging more sustainable habits.
+                        </p>
+                        <p>
+                            What makes this community special is not just where we live, but how we choose to live together—with <strong>respect for each other</strong> and a developing awareness that even small actions can contribute to a better environment for everyone.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- VIDEO PLAYER SIDE -->
+                <div data-aos="fade-left">
+                    <div class="video-box">
+                        <!-- Make sure your video is named 'community-video.mp4' in your folder -->
+                        <video controls poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200">
+                            <source src="community-video.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <div class="absolute -bottom-6 -right-6 bg-[#C9A24A] text-black px-6 py-3 font-bold text-xs uppercase tracking-widest">
+                            Impact Footage
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -333,41 +319,22 @@
     <footer id="contact" class="py-40 bg-white text-[#0B1020] px-6 overflow-hidden relative">
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
             <h2 class="text-6xl md:text-9xl font-black font-outfit leading-none mb-12 tracking-tighter uppercase">Let's Connect.</h2>
-            <p class="text-2xl font-light max-w-2xl mb-16 italic text-gray-700">Khaled Sherif • STEM Excellence & Research</p>
-            
             <a href="mailto:khaled.2523016@stemelsadat.moe.edu.eg" class="text-2xl md:text-4xl lg:text-5xl font-bold border-b-8 border-[#0B1020] hover:text-[#C9A24A] hover:border-[#C9A24A] transition-all pb-4 break-all">
                 khaled.2523016@stemelsadat.moe.edu.eg
             </a>
             
             <div class="mt-40 grid grid-cols-2 md:grid-cols-4 gap-12 w-full text-left pt-20 border-t border-[#0B1020]/10">
-                <div>
-                    <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Profile</span>
-                    <p class="font-bold">Khaled Sherif</p>
-                </div>
-                <div>
-                    <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Location</span>
-                    <p class="font-bold">Giza, Egypt</p>
-                </div>
-                <div>
-                    <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Social</span>
-                    <a href="https://github.com/KhaledWalied" target="_blank" class="font-bold hover:text-[#C9A24A] block">GitHub</a>
-                </div>
-                <div>
-                    <span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Resume</span>
-                    <a href="resume.pdf" target="_blank" class="font-bold hover:text-[#C9A24A] uppercase underline underline-offset-8">Download PDF</a>
-                </div>
+                <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Profile</span><p class="font-bold">Khaled Sherif</p></div>
+                <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Location</span><p class="font-bold">Giza, Egypt</p></div>
+                <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Social</span><a href="https://github.com/KhaledWalied" class="font-bold hover:text-[#C9A24A] block">GitHub</a></div>
+                <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Resume</span><a href="#" class="font-bold underline uppercase">Download PDF</a></div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-expo'
-        });
-
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-expo' });
         window.onscroll = function() {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
