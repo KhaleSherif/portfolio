@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khaled Sherif | Portfolio</title>
+    <title>Khaled Sherif | Mathematics & Research Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Outfit:wght@200;400;700;900&display=swap" rel="stylesheet">
@@ -84,6 +84,16 @@
             letter-spacing: -0.04em;
         }
 
+        .math-overlay {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            color: var(--accent);
+            opacity: 0.1;
+            pointer-events: none;
+            white-space: pre;
+        }
+
         .video-box {
             border: 1px solid var(--border);
             background: var(--surface);
@@ -92,6 +102,22 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
         video { width: 100%; height: auto; display: block; }
+
+        .btn-cv {
+            background: var(--accent);
+            color: black;
+            font-weight: 800;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2px;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            transition: all 0.3s ease;
+        }
+        .btn-cv:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -102,18 +128,22 @@
     <nav class="fixed top-0 w-full z-50 bg-[#0B1020]/80 backdrop-blur-md border-b border-[#1E2A44]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <span class="font-outfit font-black text-xl tracking-tighter uppercase italic">KHALED SHERIF</span>
-            <div class="flex items-center space-x-8 text-[10px] font-bold tracking-[0.3em] uppercase">
+            <div class="hidden md:flex items-center space-x-8 text-[10px] font-bold tracking-[0.3em] uppercase">
                 <a href="#honors" class="hover:text-[#C9A24A] transition">Accolades</a>
                 <a href="#experience" class="hover:text-[#C9A24A] transition">Research</a>
                 <a href="#leadership" class="hover:text-[#C9A24A] transition">Impact</a>
                 <a href="#community" class="hover:text-[#C9A24A] transition">Community</a>
-                <a href="#languages" class="hover:text-[#C9A24A] transition">Languages</a>
+                <a href="Khaled_Sherif_Resume.pdf" target="_blank" class="text-[#C9A24A] border border-[#C9A24A] px-4 py-2 hover:bg-[#C9A24A] hover:text-black transition">RESUME</a>
             </div>
         </div>
     </nav>
 
     <!-- Section 1: Hero -->
     <header class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
+        <div class="math-overlay top-40 left-10">
+            dy/dx = lim(h->0) [f(x+h)-f(x)]/h <br>∑(n=1 to ∞) 1/n² = π²/6 <br>e^iπ + 1 = 0
+        </div>
+
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center z-10">
             <div class="lg:col-span-7" data-aos="fade-right">
                 <p class="text-[#C9A24A] font-bold tracking-[0.4em] uppercase text-xs mb-4">Khaled Sherif • Researcher • Mathematician</p>
@@ -148,17 +178,16 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-12">I. Academic Honors</h2>
             <div class="flex flex-col">
-                <!-- Honors with restored Subtitles/Tags -->
                 <div class="honor-row group" data-aos="fade-up">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
                         <div class="flex items-center gap-10">
                             <span class="number-outline">01</span>
                             <div>
                                 <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">Purple Comet Math</h3>
-                                <p class="text-[#B7C0D1] text-lg mt-2">Ranked 1st Place Globally out of 4,613 competing teams worldwide.</p>
+                                <p class="text-[#B7C0D1] text-lg mt-2">Ranked 1st Place Globally out of 4,613 teams. <span class="text-white opacity-40 text-sm italic">(Apr 4, 2025)</span></p>
                             </div>
                         </div>
-                        <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">Worldwide Distinction</span>
+                        <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">World Rank #1</span>
                     </div>
                 </div>
 
@@ -168,10 +197,10 @@
                             <span class="number-outline">02</span>
                             <div>
                                 <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">National Math Team</h3>
-                                <p class="text-[#B7C0D1] text-lg mt-2">Selected for the Egyptian National Team for the IMO and PAMO 2025.</p>
+                                <p class="text-[#B7C0D1] text-lg mt-2">Selected for Egypt's National Team for the IMO and PAMO. <span class="text-white opacity-40 text-sm italic">(Apr 16, 2025)</span></p>
                             </div>
                         </div>
-                        <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">Olympic Selection</span>
+                        <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">IMO Selection</span>
                     </div>
                 </div>
 
@@ -181,10 +210,10 @@
                             <span class="number-outline">03</span>
                             <div>
                                 <h3 class="text-4xl font-bold group-hover:text-[#C9A24A] transition-colors uppercase font-outfit">Physics Olympiad (EPHO)</h3>
-                                <p class="text-[#B7C0D1] text-lg mt-2">Ranked 8th Nationally in Egypt out of ~900 selected finalists.</p>
+                                <p class="text-[#B7C0D1] text-lg mt-2">Ranked 8th Nationally in Egypt out of ~900 selected finalists. <span class="text-white opacity-40 text-sm italic">(Feb 23, 2025)</span></p>
                             </div>
                         </div>
-                        <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">Top 10 Finalist</span>
+                        <span class="px-4 py-1 border border-[#C9A24A] text-[#C9A24A] text-[10px] font-bold uppercase">National Rank #8</span>
                     </div>
                 </div>
             </div>
@@ -200,12 +229,12 @@
                     <div>
                         <span class="text-[#C9A24A] text-[10px] font-bold uppercase tracking-widest">Industry Researcher • City Plast</span>
                         <h4 class="text-3xl font-bold mt-2 mb-4 font-outfit uppercase">Optimization Model</h4>
-                        <p class="text-[#B7C0D1] leading-relaxed text-lg font-light">Developed a Python model that <strong>reduced scrap material by 12%</strong> in manufacturing extrusion.</p>
+                        <p class="text-[#B7C0D1] leading-relaxed text-lg font-light">Engineered a Python-driven predictive model to optimize polymer extrusion lines, <strong>reducing industrial scrap material by 12%</strong>.</p>
                     </div>
                     <div>
                         <span class="text-[#C9A24A] text-[10px] font-bold uppercase tracking-widest">Lead Investigator • ESEF</span>
                         <h4 class="text-3xl font-bold mt-2 mb-4 font-outfit uppercase">Urban Road Flow</h4>
-                        <p class="text-[#B7C0D1] leading-relaxed text-lg font-light">Designed software to minimize travel time via graph theory simulations in <strong>Python & Matlab</strong>.</p>
+                        <p class="text-[#B7C0D1] leading-relaxed text-lg font-light">Architected a mathematical software model to minimize travel time via graph theory simulations in <strong>Python & Matlab</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -213,15 +242,15 @@
                 <div class="p-12 border border-[#1E2A44] bg-[#111A2E] rounded-3xl">
                     <h5 class="text-[#C9A24A] font-bold uppercase text-xs mb-8 tracking-widest">Engineering Assistant</h5>
                     <ul class="space-y-6">
-                        <li class="flex gap-4"><span class="text-[#C9A24A] font-bold italic text-lg w-12 uppercase text-center">CAD</span><span class="text-[#B7C0D1]">High-precision mechanical drafting and design.</span></li>
-                        <li class="flex gap-4"><span class="text-[#C9A24A] font-bold italic text-lg w-12 uppercase text-center">SITE</span><span class="text-[#B7C0D1]">Machinery diagnostics and precision site measurement.</span></li>
+                        <li class="flex gap-4"><span class="text-[#C9A24A] font-bold italic text-lg w-12 uppercase text-center">CAD</span><span class="text-[#B7C0D1]">High-precision mechanical drafting and industrial design.</span></li>
+                        <li class="flex gap-4"><span class="text-[#C9A24A] font-bold italic text-lg w-12 uppercase text-center">SITE</span><span class="text-[#B7C0D1]">Machinery diagnostics and precision construction measurement.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Leadership (Restored Detailed Titles) -->
+    <!-- Section 4: Leadership -->
     <section id="leadership" class="py-32 bg-[#111A2E] border-y border-[#1E2A44]">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-20 text-center">III. Impact & Leadership</h2>
@@ -229,37 +258,37 @@
                 <div class="impact-badge" data-aos="fade-left">
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
                         <h3 class="text-3xl font-extrabold font-outfit uppercase">Pi4U Initiative</h3>
-                        <span class="text-[#C9A24A] font-bold text-[10px] border border-[#C9A24A] px-3 py-1 uppercase">Founder & Coach</span>
+                        <span class="text-[#C9A24A] font-bold text-[10px] border border-[#C9A24A] px-3 py-1 uppercase tracking-widest">Founder & Coach</span>
                     </div>
-                    <p class="text-[#B7C0D1] text-lg">Lecturing <strong>230+ students</strong> globally for IMO/PAMO; improved scores by <strong>+11 points</strong> on average.</p>
+                    <p class="text-[#B7C0D1] text-lg">Founded a global math incubator lecturing <strong>230+ students</strong>; optimized student performance by <strong>+26%</strong> on average.</p>
                 </div>
 
                 <div class="impact-badge" data-aos="fade-left" data-aos-delay="100">
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
                         <h3 class="text-3xl font-extrabold font-outfit uppercase">Physics Olympiad Prep</h3>
-                        <span class="text-[#C9A24A] font-bold text-[10px] border border-[#C9A24A] px-3 py-1 uppercase">Lead Coach</span>
+                        <span class="text-[#C9A24A] font-bold text-[10px] border border-[#C9A24A] px-3 py-1 uppercase tracking-widest">Lead Coach</span>
                     </div>
-                    <p class="text-[#B7C0D1] text-lg">Mentored <strong>150 students</strong>; successfully coached 7 national qualifiers for EPHO selection.</p>
+                    <p class="text-[#B7C0D1] text-lg">Managed training for <strong>150+ students</strong> in theoretical physics; coached 7 national qualifiers for EPHO selection.</p>
                 </div>
 
                 <div class="impact-badge" data-aos="fade-left" data-aos-delay="200">
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
                         <h3 class="text-3xl font-extrabold font-outfit uppercase">STEM Chess Club</h3>
-                        <span class="text-[#C9A24A] font-bold text-[10px] border border-[#C9A24A] px-3 py-1 uppercase">President</span>
+                        <span class="text-[#C9A24A] font-bold text-[10px] border border-[#C9A24A] px-3 py-1 uppercase tracking-widest">President</span>
                     </div>
-                    <p class="text-[#B7C0D1] text-lg">Expanded membership to <strong>50+ players</strong>; organized national-level tournaments and lectures.</p>
+                    <p class="text-[#B7C0D1] text-lg">Strategically scaled institutional Chess Club to <strong>50+ members</strong>; organized national tournaments.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6 mt-12" data-aos="fade-up">
                     <div class="p-10 border border-[#1E2A44] bg-[#0B1020]">
-                        <span class="text-[#C9A24A] text-[10px] font-bold uppercase tracking-widest">Arts & Composition</span>
-                        <h4 class="text-white font-bold uppercase text-xl mt-2 mb-4">Self-Taught Pianist</h4>
-                        <p class="text-[#B7C0D1] text-sm italic">Composed original pieces and performed in annual school gala concerts.</p>
-                    </div>
-                    <div class="p-10 border border-[#1E2A44] bg-[#0B1020]">
                         <span class="text-[#C9A24A] text-[10px] font-bold uppercase tracking-widest">Athletics</span>
                         <h4 class="text-white font-bold uppercase text-xl mt-2 mb-4">Setter of the Year</h4>
                         <p class="text-[#B7C0D1] text-sm italic">Varsity playmaker & School Champion. Directed strategy across 480+ hours of competition.</p>
+                    </div>
+                    <div class="p-10 border border-[#1E2A44] bg-[#0B1020]">
+                        <span class="text-[#C9A24A] text-[10px] font-bold uppercase tracking-widest">Arts</span>
+                        <h4 class="text-white font-bold uppercase text-xl mt-2 mb-4">Self-Taught Pianist</h4>
+                        <p class="text-[#B7C0D1] text-sm italic">Composed original pieces and mastered complex musical theory through disciplined practice.</p>
                     </div>
                 </div>
             </div>
@@ -271,14 +300,14 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-xs font-bold tracking-[0.5em] text-[#C9A24A] uppercase mb-16">IV. Languages</h2>
             <div class="flex flex-col md:flex-row justify-center gap-16">
-                <div data-aos="zoom-in"><p class="text-5xl md:text-7xl font-black font-outfit text-white uppercase">Arabic</p><p class="text-[10px] text-[#C9A24A] font-bold tracking-widest uppercase mt-2">Native</p></div>
-                <div data-aos="zoom-in" data-aos-delay="100"><p class="text-5xl md:text-7xl font-black font-outfit text-white uppercase">English</p><p class="text-[10px] text-[#C9A24A] font-bold tracking-widest uppercase mt-2">Fluent</p></div>
-                <div data-aos="zoom-in" data-aos-delay="200"><p class="text-5xl md:text-7xl font-black font-outfit text-white uppercase">French</p><p class="text-[10px] text-[#C9A24A] font-bold tracking-widest uppercase mt-2">Academic</p></div>
+                <div data-aos="zoom-in"><p class="text-5xl md:text-7xl font-black font-outfit text-white uppercase leading-none">Arabic</p><p class="text-[10px] text-[#C9A24A] font-bold tracking-widest uppercase mt-4">Native</p></div>
+                <div data-aos="zoom-in" data-aos-delay="100"><p class="text-5xl md:text-7xl font-black font-outfit text-white uppercase leading-none">English</p><p class="text-[10px] text-[#C9A24A] font-bold tracking-widest uppercase mt-4">Fluent</p></div>
+                <div data-aos="zoom-in" data-aos-delay="200"><p class="text-5xl md:text-7xl font-black font-outfit text-white uppercase leading-none">French</p><p class="text-[10px] text-[#C9A24A] font-bold tracking-widest uppercase mt-4">Academic</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Section 6: Community (Restored Description & Integrated Video) -->
+    <!-- Section 6: Community -->
     <section id="community" class="py-32 bg-[#111A2E] border-y border-[#1E2A44]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-24 items-center">
@@ -309,11 +338,18 @@
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
             <h2 class="text-6xl md:text-9xl font-black font-outfit leading-none mb-12 tracking-tighter uppercase">Let's Connect.</h2>
             <a href="mailto:khaled.2523016@stemelsadat.moe.edu.eg" class="text-2xl md:text-5xl font-bold border-b-8 border-[#0B1020] hover:text-[#C9A24A] transition-all pb-4 break-all">khaled.2523016@stemelsadat.moe.edu.eg</a>
+            
+            <!-- RESUME BUTTONS -->
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <a href="Khaled_Sherif_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-cv">View Full Resume (New Tab)</a>
+                <a href="Khaled_Sherif_Resume.pdf" download class="btn-cv border-2 border-black bg-transparent hover:bg-black hover:text-white">Direct Download PDF</a>
+            </div>
+
             <div class="mt-40 grid grid-cols-2 md:grid-cols-4 gap-12 w-full text-left pt-20 border-t border-[#0B1020]/10">
                 <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Profile</span><p class="font-bold uppercase">Khaled Sherif</p></div>
                 <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Location</span><p class="font-bold uppercase">Giza, Egypt</p></div>
                 <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Social</span><a href="https://github.com/KhaledWalied" class="font-bold hover:text-[#C9A24A] block">GITHUB</a></div>
-                <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Resume</span><a href="#" class="font-bold underline uppercase">Download PDF</a></div>
+                <div><span class="font-bold text-xs uppercase tracking-[0.4em] block mb-4">Credentials</span><a href="Khaled_Sherif_Resume.pdf" target="_blank" class="font-bold underline uppercase">Academic Resume</a></div>
             </div>
         </div>
     </footer>
