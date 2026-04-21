@@ -30,7 +30,7 @@ I am a high-achieving STEM scholar at **El-Sadat STEM School**, specializing in 
 - Achieved a **55.65% reduction** in theoretical travel time.
 - Validated via the **Stanley Controller** model in MATLAB to ensure real-world stability.
 
-### 🤖 [TRACE: Traffic Robotics](https://github.com/khalesherif/TRACE)
+### 🤖 [TRACE: Traffic Robotics](https://khalesherif.github.io/portfolio/trace_poster.pdf)
 **ROS, Python, LiDAR, IoT**
 - Engineered an Intelligent Road System using **Turtlebot3** to dynamically manage emergency "Green Corridors."
 - Developed a **Flask API** backend for real-time Pushbullet notifications regarding traffic violations.
